@@ -310,7 +310,7 @@ This is just a warning, not an error. The program works correctly. You can safel
 
 **Student:** Geeth Seneviratne 
 **ID:** IT23226128  
-**Course:** BSc (Hons) in Information Technology - Year 3  
+**Course:** BSc (Hons) in Computer Science - Year 3  
 **Module:** SE3082 - Parallel Computing  
 **Assignment:** 03 - Algorithm Parallelization
 
