@@ -1,0 +1,18 @@
+Generating random array...
+
+Before Sorting (Sample elements): 57814 43539 12316 30641 48545 43112 9138 93978 67921 86934 ...
+Sorting with OpenMP (16 threads)...
+After sorting (Sample elements): 0 9999 19994 29993 40006 50005 60006 69998 79994 90014 ...
+
+Verifying sorted array...
+✓ SUCCESS: Array is correctly sorted!
+
+======================
+Performance Results
+======================
+
+Array Size:  10000000 elements
+Number of Threads: 16
+Execution Time:  0.137115 seconds
+Elements/second: 72.93 million
+-------------------------------------------------------
