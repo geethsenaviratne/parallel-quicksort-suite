@@ -1,0 +1,18 @@
+Generating random array...
+
+Before Sorting (Sample elements): 82446 12918 97398 40875 25860 18811 70194 52754 44420 37694 ...
+Sorting with MPI (4 processes)...
+After sorting (Sample elements): 0 9997 20005 30006 40012 50012 60006 69994 79989 89991 ...
+
+Verifying sorted array...
+✓ SUCCESS: Array is correctly sorted!
+
+======================
+Performance Results
+======================
+
+Array Size:  10000000 elements
+Number of Processes: 4
+Execution Time:  0.209390 seconds
+Elements/second: 47.76 million
+-------------------------------------------------------

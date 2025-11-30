@@ -7,20 +7,24 @@ Updated with new results and colored labels
 
 import matplotlib.pyplot as plt
 
-# Updated Performance data from new test results
+# Updated Performance data using Serial baseline
 threads = [1, 2, 4, 8, 16]
 execution_time = [0.693676, 0.625962, 0.363606, 0.202783, 0.137115]
-speedup = [1.00, 1.11, 1.91, 3.42, 5.06]
-efficiency = [100.00, 55.45, 47.75, 42.75, 31.63]
 throughput = [14.42, 15.98, 27.50, 49.31, 72.93]
+serial_time = 1.512392  # baseline serial execution time
+
+# Calculate speedup and efficiency using Serial baseline
+speedup = []
+efficiency = []
+for i in range(len(threads)):
+    sp = serial_time / execution_time[i]
+    speedup.append(sp)
+    eff = (sp / threads[i]) * 100
+    efficiency.append(eff)
+
 ideal_speedup = [1, 2, 4, 8, 16]
 
-# Calculate speedup from execution times
-for i in range(len(threads)):
-    speedup[i] = execution_time[0] / execution_time[i]
-    efficiency[i] = (speedup[i] / threads[i]) * 100
-
-print("Generating graphs with colored labels...")
+print("Generating graphs with colored labels using serial baseline...")
 
 # Graph 1: Execution Time
 fig1, ax1 = plt.subplots(figsize=(10, 6))
@@ -31,7 +35,6 @@ ax1.set_title('Threads vs Execution Time\n(10 Million Elements)', fontsize=16, f
 ax1.grid(True, alpha=0.3)
 ax1.set_xticks(threads)
 
-# Add colored value labels
 for t, time in zip(threads, execution_time):
     ax1.annotate(f'{time:.6f}s', (t, time), textcoords="offset points", 
                  xytext=(0,15), ha='center', fontsize=10, fontweight='bold',
@@ -56,7 +59,6 @@ ax2.grid(True, alpha=0.3)
 ax2.set_xticks(threads)
 ax2.legend(fontsize=12)
 
-# Add colored value labels
 for t, sp in zip(threads, speedup):
     ax2.annotate(f'{sp:.2f}x', (t, sp), textcoords="offset points", 
                  xytext=(0,15), ha='center', fontsize=10, fontweight='bold',
@@ -76,9 +78,8 @@ ax3.set_ylabel('Efficiency (%)', fontsize=14, fontweight='bold')
 ax3.set_title('Threads vs Efficiency\n(10 Million Elements)', fontsize=16, fontweight='bold')
 ax3.grid(True, alpha=0.3, axis='y')
 ax3.set_xticks(threads)
-ax3.set_ylim([0, 110])
+ax3.set_ylim([0, 250])
 
-# Add colored value labels on bars
 for bar, eff in zip(bars, efficiency):
     height = bar.get_height()
     ax3.text(bar.get_x() + bar.get_width()/2., height, f'{eff:.2f}%',

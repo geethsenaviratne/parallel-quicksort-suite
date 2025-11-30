@@ -1,6 +1,3 @@
-# Makefile for OpenMP Parallel QuickSort
-# Author: IT23226128
-# Course: SE3082 - Parallel Computing
 
 # Compiler
 CC = gcc
