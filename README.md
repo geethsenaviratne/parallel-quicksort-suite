@@ -1,27 +1,7 @@
 # Parallel Quick Sort Suite 🚀
 
-[![Language: C](https://img.shields.io/badge/Language-C-blue.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
-[![Language: CUDA](https://img.shields.io/badge/Language-CUDA-green.svg)](https://developer.nvidia.com/cuda-zone)
-[![Language: Python](https://img.shields.io/badge/Language-Python-yellow.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
-
 A comprehensive parallel computing project implementing **Quick Sort** across multiple parallel programming paradigms: **OpenMP**, **MPI**, and **CUDA**. This project demonstrates performance optimization, scalability analysis, and comparative evaluation of different parallel computing approaches.
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Performance Highlights](#performance-highlights)
-- [Repository Structure](#repository-structure)
-- [Implementation Details](#implementation-details)
-- [Results & Analysis](#results--analysis)
-- [Installation & Usage](#installation--usage)
-- [Hardware & Software](#hardware--software)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author](#author)
-
----
 
 ## 🎯 Overview
 
@@ -371,48 +351,22 @@ The comprehensive report includes:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
-### Areas for Contribution
-
-- 🔧 Implement parallel bitonic merge for MPI scalability
-- 📊 Add more visualization scripts
-- ⚡ Optimize CUDA implementation with shared memory
-- 📝 Improve documentation and comments
-- 🧪 Add automated testing suite
-- 🔍 Implement adaptive threshold tuning
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 👤 Author
 
-**Geeth Seneviratne (Kavin)**
+**Geeth Seneviratne**
 
 - GitHub: [@geethsenaviratne](https://github.com/geethsenaviratne)
 - Student ID: IT23226128
-- Institution: [Your University/Institution]
+- Institution: SLIIT
 - Course: SE3082 - Parallel Computing
-- Semester: [Semester/Year]
+- Semester: Year 3 Semester 2
 
 ---
 
 ## 🙏 Acknowledgments
 
-- AMD Ryzen and NVIDIA CUDA development teams
+- 13th Gen Intel(R) Core (TM) i7-13620H, 2400 Mhz, 10 Core(s)
 - OpenMP, MPI, and CUDA documentation
 - Academic advisors and course instructors
 - Open-source community
@@ -421,20 +375,27 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📚 References
 
-1. OpenMP Architecture Review Board. (2024). OpenMP API Specification.
-2. MPI Forum. (2024). MPI: A Message-Passing Interface Standard.
-3. NVIDIA Corporation. (2024). CUDA C++ Programming Guide.
-4. Cormen et al. (2009). Introduction to Algorithms (3rd ed.).
+[1] W3Schools, "Quicksort Algorithm – DSA," W3Schools, Accessed: Dec. 3, 2025. [Online]. Available: https://www.w3schools.com/dsa/dsa_algo_quicksort.php
 
----
+[2] S. Jain, "Parallel Quick Sort Algorithm," Medium, 2023. Accessed: Dec. 3, 2025. [Online]. Available: https://medium.com/@sj.jainsahil1005/parallel-quick-sort-algorithm-ff8b4cb09bad
 
-## 📈 Project Status
+[3] M. C. Beukman, "Parallel Quicksort using OpenMP," Medium, 2021. Accessed: Dec. 3, 2025. [Online]. Available: https://mcbeukman.medium.com/parallel-quicksort-using-openmp-9d18d7468cac
 
-**Status**: ✅ Complete & Ready for Submission
+[4] GeeksforGeeks, "Implementation of Quick Sort using MPI, OMP and POSIX Thread," GeeksforGeeks, Accessed: Dec. 3, 2025. [Online]. Available: https://www.geeksforgeeks.org/dsa/implementation-of-quick-sort-using-mpi-omp-and-posix-thread/
 
-**Last Updated**: December 2024
+[5] Antas243, "Parallel Quicksort Algorithm," Medium, 2020. Accessed: Dec. 3, 2025. [Online]. Available: https://243-antas.medium.com/parallel-quicksort-algorithm-991cbfc94adc
 
-**Version**: 1.0.0
+[6] R. Shankar, "Revisiting Quicksort with Julia and CUDA," Medium, 2019. Accessed: Dec. 3, 2025. [Online]. Available: https://medium.com/swlh/revisiting-quicksort-with-julia-and-cuda-2a997447939b
+
+[7] Red Hat Developers, "Write a GPU algorithm for quicksort," Red Hat, 2024. Accessed: Dec. 3, 2025. [Online]. Available: https://developers.redhat.com/articles/2024/08/22/write-gpu-algorithm-quicksort#the_quicksort_algorithm
+
+[8] OpenMP Architecture Review Board, "OpenMP Application Programming Interface Version 5.2," OpenMP, 2021. [Online]. Available: https://www.openmp.org/specifications/
+
+[9] MPI Forum, "MPI: A Message-Passing Interface Standard Version 4.0," MPI Forum, 2021. [Online]. Available: https://www.mpi-forum.org/docs/
+
+[10] NVIDIA Corporation, "CUDA C++ Programming Guide," NVIDIA Developer Documentation, 2024. [Online]. Available: https://docs.nvidia.com/cuda/cuda-c-programming-guide/
+
+[11] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, *Introduction to Algorithms*, 3rd ed. Cambridge, MA: MIT Press, 2009.
 
 ---
 
@@ -447,11 +408,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 📁 [Raw Data Files](Data%20Files/)
 
 ---
-
-<div align="center">
-
-### ⭐ Star this repository if you found it helpful!
-
-**Made with ❤️ for Parallel Computing Assignment**
-
-</div>
