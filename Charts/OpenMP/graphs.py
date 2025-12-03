@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+"""
+OpenMP QuickSort Performance Graphs Generator
+Student: Kavin (IT23226128)
+Updated with new results and colored labels
+"""
+
 import matplotlib.pyplot as plt
 
 # Updated Performance data using Serial baseline
@@ -140,13 +147,3 @@ print(f"Peak Throughput: {max(throughput):.2f} million elements/second")
 print(f"Time Reduction: {((execution_time[0] - execution_time[-1]) / execution_time[0] * 100):.1f}%")
 print("="*60)
 print("\nAll 4 graphs generated successfully!")
-
-csv_filename = "openmp_results.csv"
-with open(csv_filename, mode='w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(["Threads", "Execution Time (s)", "Speedup", "Efficiency (%)", "Throughput (M elems/sec)"])
-    
-    for t, time_, sp, eff, thr in zip(threads, execution_time, speedup, efficiency, throughput):
-        writer.writerow([t, f"{time_:.6f}", f"{sp:.3f}", f"{eff:.2f}", f"{thr:.2f}"])
-
-print(f"✓ CSV file created: {csv_filename}")
