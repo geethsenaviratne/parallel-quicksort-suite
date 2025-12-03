@@ -1,0 +1,24 @@
+=================
+CUDA QUICK SORT
+=================
+
+Generating random array...
+
+Before Sorting (Sample elements): 56361 35394 7582 62925 92615 15100 51422 51933 85742 36798 ...
+Sorting with CUDA Quick Sort (Block size: 64)...
+After sorting (Sample elements): 0 10028 20025 30041 40062 50092 60126 70116 80087 90052 ...
+
+Verifying sorted array...
+✓ SUCCESS: Array is correctly sorted!
+
+======================
+Performance Results
+======================
+
+Array Size:  1000000 elements
+Block Size: 64
+GPU: NVIDIA GeForce RTX 4060 Laptop
+
+Execution Time:  0.292133 seconds
+Elements/second: 3.42 million
+-------------------------------------------------------
