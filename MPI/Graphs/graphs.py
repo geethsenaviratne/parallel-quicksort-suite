@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import matplotlib.pyplot as plt
+import csv
 
 # Updated Performance data using Serial baseline
 processes = [1, 2, 4, 8]
@@ -162,3 +163,20 @@ print(f"Time Reduction: {((execution_time[0] - execution_time[-1]) / execution_t
 print("="*60)
 
 print("\n✅ All 4 graphs generated successfully!")
+
+csv_filename = "mpi_quicksort_results.csv"
+array_size = 10000000  # 10M as indicated in the graphs title
+
+with open(csv_filename, mode='w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    # header
+    writer.writerow([
+        "Processes",
+        "Array Size",
+        "Time(s)",
+        "Speedup",
+        "Efficiency (%)",
+    ])
+    # rows
+    for p, t, sp, eff, tp in zip(processes, execution_time, speedup, efficiency):
+        writer.writerow([p, array_size, f"{t:.6f}", f"{sp:.4f}", f"{eff:.2f}"])

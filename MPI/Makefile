@@ -60,27 +60,17 @@ run:
 # Quick non-interactive tests (1,2,4,8 procs) with 1M elements
 test:
 	@echo "Testing with 1 process..."
-	$(MPIRUN) -np 1 ./$(TARGET) 1000000 || true
+	$(MPIRUN) -np 1 ./$(TARGET) 10000000 || true
 	@echo ""
 	@echo "Testing with 2 processes..."
-	$(MPIRUN) -np 2 ./$(TARGET) 1000000 || true
+	$(MPIRUN) -np 2 ./$(TARGET) 10000000 || true
 	@echo ""
 	@echo "Testing with 4 processes..."
-	$(MPIRUN) -np 4 ./$(TARGET) 1000000 || true
+	$(MPIRUN) -np 4 ./$(TARGET) 10000000 || true
 	@echo ""
 	@echo "Testing with 8 processes..."
-	$(MPIRUN) -np 8 ./$(TARGET) 1000000 || true
+	$(MPIRUN) -np 8 ./$(TARGET) 10000000 || true
 
-# Performance evaluation (larger array). Adjust counts or array size as needed.
-eval:
-	@echo "=== Performance Evaluation ==="
-	@echo "1 process:"; $(MPIRUN) -np 1 ./$(TARGET) 5000000 || true
-	@echo ""
-	@echo "2 processes:"; $(MPIRUN) -np 2 ./$(TARGET) 5000000 || true
-	@echo ""
-	@echo "4 processes:"; $(MPIRUN) -np 4 ./$(TARGET) 5000000 || true
-	@echo ""
-	@echo "8 processes:"; $(MPIRUN) -np 8 ./$(TARGET) 5000000 || true
 
 help:
 	@echo "Available targets:"
@@ -89,5 +79,4 @@ help:
 	@echo "  make run      - Interactive run (prompts for PROCS and ARRAY)."
 	@echo "                  Or non-interactive: make run PROCS=4 ARRAY=1000000"
 	@echo "  make test     - Quick tests with several process counts"
-	@echo "  make eval     - Run a performance evaluation (adjust sizes inside Makefile)"
 	@echo "  make help     - Show this help"
