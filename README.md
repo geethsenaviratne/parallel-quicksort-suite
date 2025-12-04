@@ -400,8 +400,6 @@ The comprehensive report includes:
 ---
 
 ## 🔗 Quick Links
-
-- 📄 [Full Report](Report%20-%20Quick_Sort.pdf)
 - 📊 [Performance Charts](Charts/)
 - 💻 [Source Codes](Source_Codes/)
 - 📸 [Execution Screenshots](Screenshots/)
