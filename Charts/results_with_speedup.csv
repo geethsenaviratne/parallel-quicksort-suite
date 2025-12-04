@@ -1,0 +1,5 @@
+Implementation,,,ExecutionTimeSeconds,,,Speedup
+Serial,,,1.589532,,,1.0
+OpenMP (8 threads),,,0.208704,,,7.62
+MPI (8 processes),,,0.220486,,,7.21
+CUDA (256 blocks),,,1.228265,,,1.29
