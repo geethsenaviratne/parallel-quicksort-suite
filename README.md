@@ -175,7 +175,7 @@ void quickSortParallel(int arr[], int low, int high) {
 
 ### Execution Time Comparison
 
-![Execution Time](Charts/combined.png)
+![Execution Time](https://github.com/geethsenaviratne/parallel-quicksort-suite/blob/main/Charts/execution_time.png?raw=true)
 
 **Key Observations**:
 - OpenMP and MPI dramatically outperform serial and CUDA
@@ -185,7 +185,7 @@ void quickSortParallel(int arr[], int low, int high) {
 
 ### Speedup Comparison
 
-![Speedup Comparison](Charts/speedup.png)
+![Speedup Comparison](https://github.com/geethsenaviratne/parallel-quicksort-suite/blob/main/Charts/speedup.png?raw=true)
 
 **Rankings**:
 1. 🥇 **OpenMP 16T**: 11.03x speedup
@@ -195,7 +195,7 @@ void quickSortParallel(int arr[], int low, int high) {
 
 ### OpenMP Scaling
 
-![OpenMP Performance](Charts/OpenMP/combined_all_graphs.png)
+![OpenMP Performance](https://github.com/geethsenaviratne/parallel-quicksort-suite/blob/main/Source_Codes/OpenMP/graphs/combined_all_graphs.png?raw=true)
 
 - **Strong Scaling**: Excellent through 8 threads (93% efficiency)
 - **Moderate Scaling**: 8→16 threads (69% efficiency due to hyper-threading)
@@ -203,7 +203,7 @@ void quickSortParallel(int arr[], int low, int high) {
 
 ### MPI Scaling
 
-![MPI Performance](Charts/MPI/combined_all_graphs.png)
+![MPI Performance](https://github.com/geethsenaviratne/parallel-quicksort-suite/blob/main/Source_Codes/MPI/Graphs/combined_all_graphs.png?raw=true)
 
 - **Near-Linear**: Consistent scaling through 8 processes
 - **High Efficiency**: 90-95% maintained
@@ -211,7 +211,7 @@ void quickSortParallel(int arr[], int low, int high) {
 
 ### CUDA Configuration
 
-![CUDA Performance](Charts/CUDA/combined_graphs.png)
+![CUDA Performance](https://github.com/geethsenaviratne/parallel-quicksort-suite/blob/main/Source_Codes/CUDA/Graphs/combined_graphs.png?raw=true)
 
 - **Critical Configuration**: 512 blocks optimal (6.2x better than 64 blocks)
 - **Occupancy**: 85% @ 512 blocks vs 15% @ 64 blocks
