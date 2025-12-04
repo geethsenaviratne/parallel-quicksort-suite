@@ -64,13 +64,6 @@ parallel-quicksort-suite/
 │       ├── quicksort_cuda.cu           # CUDA hybrid implementation
 │       ├── Makefile                    # Build configuration
 │       └── Graphs/                     # CUDA performance graphs
-├── Charts/
-│   ├── OpenMP/                         # OpenMP performance charts
-│   ├── MPI/                            # MPI performance charts
-│   ├── CUDA/                           # CUDA performance charts
-│   ├── combined.png                    # Comparative execution time
-│   ├── speedup.png                     # Comparative speedup chart
-│   └── compare_graphs.py               # Python script for comparisons
 ├── Data Files/
 │   ├── OpenMP-output_files/            # OpenMP CSV results
 │   ├── MPI-output_files/               # MPI CSV results
@@ -80,6 +73,7 @@ parallel-quicksort-suite/
 │   ├── MPI/                            # MPI execution screenshots
 │   └── CUDA/                           # CUDA execution screenshots
 ├── Report - Quick_Sort.pdf             # Comprehensive analysis report
+├── Graph - Graph.pdf                   # Comprehensive graphs
 └── README.md                           # This file
 ```
 
