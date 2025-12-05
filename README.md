@@ -72,7 +72,15 @@ parallel-quicksort-suite/
 │   ├── OpenMp/                         # OpenMP execution screenshots
 │   ├── MPI/                            # MPI execution screenshots
 │   └── CUDA/                           # CUDA execution screenshots
-├── Report - Quick_Sort.pdf             # Comprehensive analysis report
+├── Charts/                                   
+│   ├── combined.png                           # Combined performance graph
+│   ├── compare_graphs.py                      # Python script for graph comparison
+│   ├── execution_time.png                     # Execution time comparison plot
+│   ├── results_with_speedup.csv               # CSV data used for plotting
+│   └── speedup.png                            # Speedup comparison graph
+├── Report Document/                           # Official project documentation
+│   ├── email correspondence.pdf               # Communication proof
+│   └── Report-Quick_sort.pdf                  # Full analysis & final report
 ├── Graph - Graph.pdf                   # Comprehensive graphs
 └── README.md                           # This file
 ```
