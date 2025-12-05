@@ -17,14 +17,14 @@
         } \
     } while(0)
 
-// Device function: swap two elements
+// Device function-swap two elements
 __device__ void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-// Device function: insertion sort for small arrays
+// Device function - insertion sort for small arrays
 __device__ void insertionSort(int* arr, int left, int right) {
     for (int i = left + 1; i <= right; i++) {
         int key = arr[i];
@@ -37,7 +37,7 @@ __device__ void insertionSort(int* arr, int left, int right) {
     }
 }
 
-// Device function: partition
+// Device function-partition
 __device__ int partition(int* arr, int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
@@ -52,7 +52,7 @@ __device__ int partition(int* arr, int low, int high) {
     return i + 1;
 }
 
-// Device function: iterative quick sort
+// Device function - iterative quick sort
 __device__ void quickSortDevice(int* arr, int low, int high) {
     int stack[MAX_DEPTH * 2];
     int top = -1;
@@ -85,7 +85,7 @@ __device__ void quickSortDevice(int* arr, int low, int high) {
     }
 }
 
-// CUDA kernel: parallel quick sort on segments
+// CUDA kernel - parallel quick sort on segments
 __global__ void quickSortKernel(int* arr, int size, int num_threads) {
     int tid = blockIdx.x * blockDim.x + threadIdx.x;
     
@@ -135,7 +135,7 @@ int isSorted(int arr[], int size) {
     return 1;
 }
 
-// Print sample elements
+
 void printSampleElements(int arr[], int size) {
     int step = size / 10;
     if (step == 0) step = 1;
@@ -161,7 +161,7 @@ int main() {
     float gpu_time_ms;
     cudaEvent_t start, stop;
     
-    // Get block size
+    
     printf("Enter the block size: ");
     if (scanf("%d", &blockSize) != 1 || blockSize <= 0) {
         printf("Error: Invalid block size!\n");
@@ -173,7 +173,7 @@ int main() {
         return 1;
     }
     
-    // Get array size
+    
     printf("Enter the array size: ");
     if (scanf("%d", &size) != 1 || size <= 0) {
         printf("Error: Invalid array size!\n");
@@ -191,7 +191,7 @@ int main() {
         return 1;
     }
     
-    // Generate random array
+  
     srand(time(NULL));
     printf("Generating random array...\n");
     generateRandomArray(h_arr, size);
@@ -214,7 +214,7 @@ int main() {
     // Start timing
     CUDA_CHECK(cudaEventRecord(start, 0));
     
-    // Phase 1: Parallel QuickSort on segments
+    // Parallel QuickSort on segments
     int num_segments = blockSize;
     if (num_segments > size / 1000) num_segments = size / 1000;
     if (num_segments < 1) num_segments = 1;
@@ -224,7 +224,7 @@ int main() {
     CUDA_CHECK(cudaGetLastError());
     CUDA_CHECK(cudaDeviceSynchronize());
     
-    // Phase 2: GPU Bitonic Merge (ALL ON GPU - NO CPU!)
+    // GPU Bitonic Merge (ALL ON GPU - NO CPU!)
     if (num_segments > 1) {
         int paddedSize = nextPowerOf2(size);
         int *d_padded = NULL;
@@ -237,7 +237,7 @@ int main() {
             // Set padding to max value
             int *d_padding = d_padded + size;
             int paddingSize = paddedSize - size;
-            int maxVal = 2147483647;
+            int maxVal = 2147483647; // largest 32-bit integer
             
             int *h_padding = (int*)malloc(paddingSize * sizeof(int));
             for (int i = 0; i < paddingSize; i++) h_padding[i] = maxVal;
@@ -274,7 +274,7 @@ int main() {
     printf("After sorting (Sample elements): ");
     printSampleElements(h_arr, size);
     
-    // Verify
+    
     printf("\nVerifying sorted array...\n");
     if (isSorted(h_arr, size)) {
         printf("✓ SUCCESS: Array is correctly sorted!\n");
