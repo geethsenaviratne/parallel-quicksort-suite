@@ -1,7 +1,7 @@
 # MPI Quick Sort Implementation
 ## SE3082 - Parallel Computing Assignment 03
 
-**Student:** Geeth Seneviratne  
+
 **Student ID:** IT23226128  
 **Algorithm:** Quick Sort  
 **Parallelization Method:** MPI (Message Passing Interface)  

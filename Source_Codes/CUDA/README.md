@@ -1,7 +1,6 @@
 # CUDA Quick Sort Implementation
 ## SE3082 - Parallel Computing Assignment 03
 
-**Student:** Geeth Seneviratne  
 **Student ID:** IT23226128  
 **Algorithm:** Hybrid Quick Sort (Quick Sort + Bitonic Merge)  
 **Parallelization Method:** CUDA (GPU Computing)  
@@ -26,16 +25,16 @@ CUDA/
 │   └── graph2_blocksize_vs_speedup.png # Block size vs speedup chart
 │
 ├── Results/                             # Output files from test runs
-│   ├── Block-64_output.txt             # 64 block results
-│   ├── Block-128_output.txt            # 128 block results
-│   ├── Block-256_output.txt            # 256 block results
-│   └── Block-512_output.txt            # 512 block results
+│   ├── Block-64_output.txt             
+│   ├── Block-128_output.txt            
+│   ├── Block-256_output.txt            
+│   └── Block-512_output.txt            
 │
-├── Screenshots/                         # Visual documentation
-│   ├── Blocks-64.png                   # 64 block screenshot
-│   ├── Blocks-128.png                  # 128 block screenshot
-│   ├── Blocks-256.png                  # 256 block screenshot
-│   └── Blocks-512.png                  # 512 block screenshot
+├── Screenshots/                         # Execution screenshots
+│   ├── Blocks-64.png                   
+│   ├── Blocks-128.png                  
+│   ├── Blocks-256.png                  
+│   └── Blocks-512.png                  
 │
 ├── cuda_quicksort                       # Compiled executable
 ├── cuda_quicksort.cu                    # Main CUDA source code

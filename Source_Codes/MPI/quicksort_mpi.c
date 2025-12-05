@@ -151,17 +151,13 @@ int main(int argc, char* argv[]) {
     start_time = MPI_Wtime();
     
     // Scatter data from master to all processes
-    MPI_Scatter(arr, local_size, MPI_INT, 
-                local_arr, local_size, MPI_INT, 
-                0, MPI_COMM_WORLD);
+    MPI_Scatter(arr, local_size, MPI_INT, local_arr, local_size, MPI_INT, 0, MPI_COMM_WORLD);
     
     // Each process sorts its local array
     quickSort(local_arr, 0, local_size - 1);
     
     // Gather sorted arrays back to master
-    MPI_Gather(local_arr, local_size, MPI_INT, 
-               arr, local_size, MPI_INT, 
-               0, MPI_COMM_WORLD);
+    MPI_Gather(local_arr, local_size, MPI_INT, arr, local_size, MPI_INT, 0, MPI_COMM_WORLD);
     
     // Master merges all sorted chunks
     if (rank == 0) {

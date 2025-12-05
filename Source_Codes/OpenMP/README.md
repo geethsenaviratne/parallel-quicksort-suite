@@ -1,8 +1,6 @@
 # OpenMP Quick Sort Implementation
 ## SE3082 - Parallel Computing Assignment 03
 
-**Student:** Geeth Seneviratne 
-**Student ID:** IT23226128  
 **Algorithm:** Quick Sort  
 **Parallelization Method:** OpenMP (Shared Memory)  
 **Array Size:** 10,000,000 elements

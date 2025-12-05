@@ -6,9 +6,7 @@
 ## 📋 Overview
 
 This is a serial (non-parallel) implementation of the Quick Sort algorithm in C. It serves as the baseline for comparing parallel implementations using OpenMP, MPI, and CUDA.
-
-**Student:** Geeth Seneviratne 
-**Student ID:** IT23226128  
+ 
 **Algorithm:** Quick Sort  
 **Problem Domain:** Sorting and Searching Algorithms
 
@@ -18,9 +16,10 @@ This is a serial (non-parallel) implementation of the Quick Sort algorithm in C.
 
 ```
 serial/
-├── serial.c          # Source code
-├── Makefile          # Build automation
-└── README.md         # This file
+├── serial.c              # Source code
+├── Makefile              # Build automation
+├── serial-output.png     # Output screenshots
+└── README.md             # This file
 ```
 
 ---
