@@ -209,7 +209,7 @@ int main(int argc, char* argv[]) {
     MPI_Barrier(MPI_COMM_WORLD);
     end_time = MPI_Wtime();
     
-    // Master displays results
+    
     if (rank == 0) {
         printf("After sorting (Sample elements): ");
         printSampleElements(arr, size);

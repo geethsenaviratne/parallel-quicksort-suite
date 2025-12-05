@@ -9,8 +9,8 @@ void swap(int* a, int* b) {
     *b = temp;
 }
 
-// Partition function - places pivot in correct position
-// and arranges smaller elements to left, larger to right
+// Partition function 
+// smaller elements to left, larger to right
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];  // Choose rightmost element as pivot
     int i = low - 1;        // Index of smaller element
@@ -26,13 +26,13 @@ int partition(int arr[], int low, int high) {
     return i + 1;
 }
 
-// Main Quick Sort function
+// Quick Sort function
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         // Partition the array and get pivot index
         int pi = partition(arr, low, high);
         
-        // Recursively sort elements before and after partition
+        // Recursively sort elements before & after partition
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
@@ -55,22 +55,22 @@ int isSorted(int arr[], int size) {
     return 1;
 }
 
-// Function to print array (shows first 10 and last 10 elements)
+// Print array function
 void printArray(int arr[], int size) {
     if (size <= 20) {
-        // If array is small, print all elements
+        
         for (int i = 0; i < size; i++) {
             printf("%d ", arr[i]);
         }
         printf("\n");
     } else {
-        // Print first 10 elements
+        
         for (int i = 0; i < 10; i++) {
             printf("%d ", arr[i]);
         }
         printf("... ");
         
-        // Print last 10 elements
+        // last 10 elements
         for (int i = size - 10; i < size; i++) {
             printf("%d ", arr[i]);
         }
@@ -81,14 +81,14 @@ void printArray(int arr[], int size) {
 int main() {
     int size;
     
-    // Get array size from user
+    
     printf("Enter array size: ");
     if (scanf("%d", &size) != 1) {
         printf("Error: Invalid input!\n");
         return 1;
     }
     
-    // Validate input
+   
     if (size <= 0) {
         printf("Error: Array size must be positive!\n");
         return 1;
@@ -108,15 +108,15 @@ int main() {
     // Generate random array
     generateRandomArray(arr, size);
     
-    // Display header
+   
     printf("\n===================\n");
     printf("Serial Quick Sort\n");
     printf("===================\n");
     
-    // Display array size
+    
     printf("Array Size: %d\n\n", size);
     
-    // Display array before sorting
+    
     printf("Before sorting: \n");
     printArray(arr, size);
     printf("\n");
@@ -128,12 +128,12 @@ int main() {
     
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
     
-    // Display array after sorting
+   
     printf("After sorting: \n");
     printArray(arr, size);
     printf("\n");
     
-    // Verify sorting
+    
     printf("Verifying sorted array...\n");
     if (isSorted(arr, size)) {
         printf("✓ SUCCESS: Array is correctly sorted!\n\n");
@@ -141,7 +141,7 @@ int main() {
         printf("✗ FAILED: Array is NOT correctly sorted!\n\n");
     }
     
-    // Display execution time
+   
     printf("Execution Time: %.6f seconds\n", time_taken);
     printf("----------------------------------------\n");
     

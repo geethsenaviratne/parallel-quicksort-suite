@@ -4,7 +4,6 @@
 #include <omp.h>
 
 // Minimum size for creating parallel tasks
-// Below this threshold, use serial sort to avoid overhead
 #define TASK_THRESHOLD 10000
 
 // Function to swap two elements
@@ -14,8 +13,7 @@ void swap(int* a, int* b) {
     *b = temp;
 }
 
-// Partition function - places pivot in correct position
-// and arranges smaller elements to left, larger to right
+// Partition function
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];  // Choose rightmost element as pivot
     int i = low - 1;        // Index of smaller element
@@ -31,7 +29,7 @@ int partition(int arr[], int low, int high) {
     return i + 1;
 }
 
-// Serial Quick Sort (used for small subarrays)
+// Serial Quick Sort
 void quickSortSerial(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
@@ -92,7 +90,7 @@ void quickSortParallel(int arr[], int low, int high) {
 // Function to generate random array
 void generateRandomArray(int arr[], int size) {
     for (int i = 0; i < size; i++) {
-        arr[i] = rand() % 100000;  // 0-99999 range for better distribution
+        arr[i] = rand() % 100000;  // 0-99999 range 
     }
 }
 
@@ -106,7 +104,7 @@ int isSorted(int arr[], int size) {
     return 1;
 }
 
-// Function to print sample elements (every size/10 element)
+// Function to print sample elements
 void printSampleElements(int arr[], int size) {
     int step = size / 10;
     if (step == 0) step = 1;
@@ -157,15 +155,15 @@ int main(int argc, char* argv[]) {
     // Seed random number generator
     srand(time(NULL));
     
-    // Generate random array
+  
     printf("Generating random array...\n");
     generateRandomArray(arr, size);
     
-    // Display sample elements before sorting
+    
     printf("\nBefore Sorting (Sample elements): ");
     printSampleElements(arr, size);
     
-    // Sorting message
+    
     printf("Sorting with OpenMP (%d threads)...\n", num_threads);
     
     // Measure execution time
@@ -183,11 +181,11 @@ int main(int argc, char* argv[]) {
     double end = omp_get_wtime();
     double time_taken = end - start;
     
-    // Display sample elements after sorting
+    
     printf("After sorting (Sample elements): ");
     printSampleElements(arr, size);
     
-    // Verify sorting
+    
     printf("\nVerifying sorted array...\n");
     if (isSorted(arr, size)) {
         printf("✓ SUCCESS: Array is correctly sorted!\n");
@@ -197,7 +195,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     
-    // Display performance results
+    
     printf("\n======================\n");
     printf("Performance Results\n");
     printf("======================\n");

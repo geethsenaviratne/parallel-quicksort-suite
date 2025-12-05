@@ -1,5 +1,3 @@
-# Makefile for Serial Quick Sort
-# Assignment 03 - SE3082 Parallel Computing
 
 # Compiler
 CC = gcc
